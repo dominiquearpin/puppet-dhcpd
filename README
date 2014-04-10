@@ -1,0 +1,12 @@
+Puppet modules
+~~~~~~~~~~~~~~
+
+Here is a list of Puppet modules. Each modules should be developed in its own branch
+
+Merge to development
+~~~~~~~~~~~~~~~~~~~~
+Once the module is working, merge development branch with your new branch.
+
+Merge to production
+~~~~~~~~~~~~~~~~~~~
+Once tested in development, merge production branch with your validated branch.
