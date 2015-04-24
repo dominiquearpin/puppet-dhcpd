@@ -33,8 +33,8 @@ class dhcpd::config(
 $config_file       = '',
 $options           = {},
 $include           = [],
-$ddns_domainname   = '',
-$ddns_update_style = '',
+$ddns_domainname   = undef,
+$ddns_update_style = undef,
 $ddns_zones        = {},
 $omapi_port        = undef,
 $omapi_key         = undef,
@@ -43,9 +43,10 @@ $authoritative     = undef,
   include dhcpd::params
 
   concat { $config_file:
-    owner   => 'root',
-    group   => 'root',
-    mode    => '0644',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
+    notify => Service[$::dhcpd::params::service_name],
   }
 
 
