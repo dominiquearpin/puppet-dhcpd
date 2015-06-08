@@ -13,6 +13,7 @@ $allow_duplicates          = false,
 $deny_client_updates       = false,
 $allow_client_updates      = false,
 $update_conflict_detection = false,
+$update_static_leases      = false,
 $disable_ddns_updates      = false,
 $shared_network_name       = 'global',
 ) {
