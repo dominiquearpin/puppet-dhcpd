@@ -54,9 +54,6 @@ $global_config       = {},
   class { 'dhcpd::install': }->
   class { 'dhcpd::service': }
 
-
-  notice("config_file = ${config_file}")
-
   $config_params = { 'dhcpd::config' => merge($global_config, {config_file => $config_file}) }
   create_resources( 'class', $config_params)
 
