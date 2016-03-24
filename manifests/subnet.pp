@@ -29,6 +29,9 @@ $shared_network_name       = 'global',
     $front_spaces = '  '
   }
 
+  # this allows setting update-conflict-detection with flag if needed (ie dhcpd >= 3.1.0)
+  $dhcpd_version_compare = versioncmp($::dhcpd_version, '3.1.0')
+
   concat::fragment { "${_shared_network_name}_2_${_subnet_name}_subnet_1":
     content => template('dhcpd/dhcpd_subnet_header.conf.erb'),
     target  => $config_file,
