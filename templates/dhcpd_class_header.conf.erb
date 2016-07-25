@@ -1,6 +1,9 @@
 
 # class <%= @name %>
 class "<%= @name %>" {
+<% if @class_cfg_prepend -%>
+  <%= @class_cfg_prepend %>
+<% end -%>
 <% if @match_if -%>
   match if <%= @match_if %>;
 <% end -%>
@@ -15,5 +18,8 @@ class "<%= @name %>" {
 <% end -%>
 <% if @max_lease_time -%>
   max-lease-time <%= @max_lease_time %>;
+<% end -%>
+<% if @class_cfg_append -%>
+  <%= @class_cfg_append %>
 <% end -%>
 }
