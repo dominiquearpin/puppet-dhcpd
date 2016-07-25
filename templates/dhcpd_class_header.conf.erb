@@ -3,7 +3,7 @@
 class "<%= @name %>" {
 <% if @class_cfg_prepend -%>
 <% @class_cfg_prepend.each_line do |line| -%>
-  <%= line %>
+  <%= line -%>
 <% end -%>
 <% end -%>
 <% if @match_if -%>
@@ -23,7 +23,7 @@ class "<%= @name %>" {
 <% end -%>
 <% if @class_cfg_append -%>
 <% @class_cfg_append.each_line do |line| -%>
-  <%= line %>
+  <%= line -%>
 <% end -%>
 <% end -%>
 }
