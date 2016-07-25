@@ -182,3 +182,10 @@ Most of these parameters have sensible defaults but you **must** provide a value
     split                    => 128,
   }
 ```
+
+## Changelog
+
+### 0.4.0
+
+* New defined type `dhcpd::option`
+* Add `class_cfg_prepend` and `class_cfg_append` parameters to `dhcpd::class` defined type for complex workstation class configuration

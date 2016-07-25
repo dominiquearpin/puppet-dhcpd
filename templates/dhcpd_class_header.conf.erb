@@ -1,10 +1,15 @@
 
 # class <%= @name %>
 class "<%= @name %>" {
+<% if @class_cfg_prepend -%>
+<% @class_cfg_prepend.each_line do |line| -%>
+  <%= line -%>
+<% end -%>
+<% end -%>
 <% if @match_if -%>
   match if <%= @match_if %>;
 <% end -%>
-<% if @filename -%>
+<% if @filename and !@filename.empty?() -%>
   filename "<%= @filename %>";
 <% end -%>
 <% if @next_server -%>
@@ -15,5 +20,10 @@ class "<%= @name %>" {
 <% end -%>
 <% if @max_lease_time -%>
   max-lease-time <%= @max_lease_time %>;
+<% end -%>
+<% if @class_cfg_append -%>
+<% @class_cfg_append.each_line do |line| -%>
+  <%= line -%>
+<% end -%>
 <% end -%>
 }

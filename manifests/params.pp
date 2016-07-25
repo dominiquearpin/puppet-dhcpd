@@ -11,7 +11,10 @@ class dhcpd::params {
     redhat: {
       $package_name = 'dhcp'
       $service_name = 'dhcpd'
-      case $::operatingsystemmajrelease {
+      # Hack for facter < 1.7
+      $_os = pick($::operatingsystemmajrelease,
+           regsubst($::operatingsystemrelease, '^([0-9]+).*', '\1'))
+      case $_os {
         3,4,5: {
           $config_file  = '/etc/dhcpd.conf'
         }

@@ -1,0 +1,9 @@
+# Host entry
+host <%= @title %> {
+<% if @hardware_address -%>
+  hardware <%= @hardware_type %> <%= @hardware_address %>;
+<% end -%>
+<% if @fixed_address -%>
+  fixed-address <%= @fixed_address %>;
+<% end -%>
+}

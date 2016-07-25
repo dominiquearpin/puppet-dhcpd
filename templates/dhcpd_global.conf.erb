@@ -3,7 +3,7 @@ authoritative;
 <% end -%>
 
 # Global configuration follows
-<% @config.sort.map do |confname,confvalue| -%>
+<% @config.map do |confname,confvalue| -%>
 <% if confvalue.is_a?(Array) -%>
 <%= confname %> <%= confvalue.join(",") %>;
 <% else -%>
@@ -12,7 +12,7 @@ authoritative;
 <% end -%>
 
 # DHCP options follow
-<% @options.sort.map do |optname,optvalue| -%>
+<% @options.each do |optname,optvalue| -%>
 <% if optvalue.is_a?(Array) -%>
 option <%= optname %> <%= optvalue.join(",") %>;
 <% else -%>

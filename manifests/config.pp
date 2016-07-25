@@ -38,8 +38,8 @@ $config_file       = '',
 $options           = {},
 $config            = {},
 $include           = [],
-$ddns_domainname   = '',
-$ddns_update_style = '',
+$ddns_domainname   = undef,
+$ddns_update_style = undef,
 $ddns_zones        = {},
 $omapi_port        = undef,
 $omapi_key         = undef,
@@ -68,6 +68,6 @@ $authoritative     = undef,
   concat::fragment { 'dhcpd_global_conf':
     content => template('dhcpd/dhcpd_global.conf.erb'),
     target  => $config_file,
-    order   => '05'
+    order   => '02'
   }
 }
