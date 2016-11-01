@@ -35,13 +35,13 @@ $config_file       = $::dhcpd::config_file,
   concat::fragment { "configfile${config_name}_header":
     content => template('dhcpd/configfile_header.conf.erb'),
     target  => $title,
-    order   => '01'
+    order   => 10
   }
 
   concat::fragment { "configfile${config_name}_footer":
     content => template('dhcpd/configfile_footer.conf.erb'),
     target  => $title,
-    order   => '05'
+    order   => 50
   }
 
   concat::fragment { "dhcpd_include${config_name}":

@@ -62,12 +62,18 @@ $authoritative     = undef,
   concat::fragment { 'dhcpd_header':
     content => template('dhcpd/dhcpd_header.conf.erb'),
     target  => $config_file,
-    order   => '01'
+    order   => 10
   }
 
   concat::fragment { 'dhcpd_global_conf':
     content => template('dhcpd/dhcpd_global.conf.erb'),
     target  => $config_file,
-    order   => '02'
+    order   => 20
+  }
+
+  concat::fragment { 'dhcpd_include_conf':
+    content => template('dhcpd/dhcpd_include.conf.erb'),
+    target  => $config_file,
+    order   => 90
   }
 }

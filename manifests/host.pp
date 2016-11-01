@@ -3,7 +3,7 @@ $config_file        = $::dhcpd::config_file,
 $hardware_type      = undef,
 $hardware_address   = undef,
 $fixed_address      = undef,
-$order              = '03',
+$order              = 30,
 ) {
   include dhcpd::params
 

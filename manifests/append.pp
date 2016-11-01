@@ -1,7 +1,7 @@
 define dhcpd::append(
 $config_file           = '',
 $content               = undef,
-$order                 = '99',
+$order                 = 99,
 ) {
   include dhcpd::params
 
