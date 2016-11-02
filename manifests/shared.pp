@@ -1,7 +1,7 @@
 define dhcpd::shared(
 $config_file               = $::dhcpd::config_file,
 $options                   = {},
-$order                     = '10',
+$order                     = 60,
 ) {
   include dhcpd::params
 

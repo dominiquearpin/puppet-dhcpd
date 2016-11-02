@@ -3,7 +3,7 @@ $config_file               = $::dhcpd::config_file,
 $network                   = '',
 $netmask                   = '',
 $options                   = {},
-$order                     = '10',
+$order                     = 80,
 $pools                     = undef,
 $ranges                    = undef,
 $next_server               = undef,
@@ -44,7 +44,7 @@ $failover_peer             = undef,
   concat::fragment { "${_shared_network_name}_2_${_subnet_name}_subnet_3":
     content => template('dhcpd/dhcpd_subnet_end.conf.erb'),
     target  => $config_file,
-    order   => $order,
+    order   => $order + 1,
   }
 
 }

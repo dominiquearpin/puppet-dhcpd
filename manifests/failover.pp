@@ -28,6 +28,6 @@ class dhcpd::failover (
   concat::fragment { 'dhcpd_failover':
     content => template('dhcpd/dhcpd_failover.conf.erb'),
     target  => $dhcpd::config_file,
-    order   => '04'
+    order   => 40
   }
 }

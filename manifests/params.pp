@@ -15,10 +15,10 @@ class dhcpd::params {
       $_os = pick($::operatingsystemmajrelease,
            regsubst($::operatingsystemrelease, '^([0-9]+).*', '\1'))
       case $_os {
-        3,4,5: {
+        '3','4','5': {
           $config_file  = '/etc/dhcpd.conf'
         }
-        6,7: {
+        '6','7': {
           $config_file  = '/etc/dhcp/dhcpd.conf'
         }
         default: {

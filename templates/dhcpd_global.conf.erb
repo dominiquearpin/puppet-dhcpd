@@ -24,10 +24,6 @@ option <%= optname %> <%= optvalue %>;
 <% end -%>
 <% end -%>
 
-<% @include.each do |value| -%>
-include "<%= value %>";
-<% end -%>
-
 <% if @ddns_domainname -%>
 ddns-domainname "<%= @ddns_domainname %>";
 <% end -%>
