@@ -1,3 +1,7 @@
+## Version 0.4.1 (03/11/2016)
+* Enable Puppet 4 compatibility
+* Fix compatibility with dhcpd >= 3.1.0 on update-conflict-detection
+
 ## Version 0.3.1 (04/11/2015)
 * Fix 2 issues in failover template
 
