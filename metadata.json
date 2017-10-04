@@ -8,7 +8,7 @@
   "project_page": "https://forge.puppetlabs.com/davidb/dhcpd",
   "issues_url": "https://github.com/david-barbion/puppet-dhcpd/issues",
   "dependencies": [
-    {"name":"puppetlabs-concat","version_requirement":">= 1.1.0 < 2.0.0"},
+    {"name":"puppetlabs-concat","version_requirement":">= 1.1.0 < 5.0.0"},
     {"name":"puppetlabs-stdlib","version_requirement":">= 4.2.2 < 5.0.0"}
   ],
   "tags": [
